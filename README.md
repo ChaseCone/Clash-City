@@ -1,2 +1,2 @@
 # Clash-City
-Chase, TJ, and Jackie's game project.
+Chase, TJ, and Jacky's game project.
