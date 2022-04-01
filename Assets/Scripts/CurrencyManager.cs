@@ -11,7 +11,7 @@ public class CurrencyManager : MonoBehaviour
     void Start()
     {
         currency = 0;
-        currencyText.text = "Currency: " + currency; 
+        currencyText.text = "Coins: " + currency; 
     }
 
     // Update is called once per frame
@@ -20,8 +20,23 @@ public class CurrencyManager : MonoBehaviour
         
     }
 
-    private void UpdateScore (int scoreToAdd)
+    public int GetCurrency ()
     {
+        return currency;
+    }
 
+    public void SetCurrency (int curr)
+    {
+        currency = curr;
+    }
+
+    private int addCurrency (int moreCurrency)
+    {
+       return currency += moreCurrency;
+    }
+
+    private int subCurrency (int lessCurrency)
+    {
+       return currency -= lessCurrency;
     }
 }
