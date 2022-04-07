@@ -6,8 +6,19 @@ using UnityEngine.UI;
 public class PlacementManager : MonoBehaviour
 {
     public GameObject cube;
-    public Canvas shopUI;
-    public Canvas infoUI;
+    public GameObject shopUI;
+    public GameObject infoUI;
+
+    public Button buyFarm;
+    public Button buyCrossbow;
+    public Button buyCannon;
+    public Button buyMage;
+    public Button exitShop;
+
+    public Button upgrade;
+    public Button remove;
+    public Button exitInfo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +34,9 @@ public class PlacementManager : MonoBehaviour
     public void PromptShop(GameObject clicked)
     {
         ClickDetector refScript = clicked.GetComponent<ClickDetector>();
-        refScript.currTower = ClickDetector.TowerType.cannon;
-        PlaceTower(clicked);
+        shopUI.SetActive(true);
+        //refScript.currTower = ClickDetector.TowerType.cannon;
+        //PlaceTower(clicked);
     }
 
     public void PromptInfo(GameObject clicked)
