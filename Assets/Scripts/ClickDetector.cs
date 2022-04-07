@@ -6,6 +6,16 @@ public class ClickDetector : MonoBehaviour
 {
     private GameObject placementManager;
     private PlacementManager placementManagerScript;
+    public int towerLevel = 0;
+    public enum TowerType
+    {
+        none,
+        farm,
+        crossbow,
+        cannon,
+        mage
+    }
+    public TowerType currTower = TowerType.none;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +31,13 @@ public class ClickDetector : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("mouseDown");
-        if(gameObject.tag == "Empty")
+        if(currTower == TowerType.none)
         {
-            gameObject.tag = "Full";
-            placementManagerScript.PlaceTower(gameObject);
+            placementManagerScript.PromptShop(gameObject);
+        }
+        else
+        {
+            placementManagerScript.PromptInfo(gameObject);
         }
     }
 
