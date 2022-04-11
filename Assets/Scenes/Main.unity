@@ -2585,6 +2585,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2657,6 +2658,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 70, y: 180, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2dda060f2f3bc94f830ebdfa7587555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Zoomer: {fileID: 963194225}
 --- !u!1 &977986388
 GameObject:
   m_ObjectHideFlags: 0
@@ -4769,7 +4783,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 449f567754ee77d4280bddf76fde04b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 872915896982836257, guid: 30552d7f6e736f74a8133d28f8b7065b, type: 3}
+  cannon1: {fileID: 4026056580554194715, guid: 5cabbf30296b27240b060316da05d062, type: 3}
+  crossbow1: {fileID: 2760444882738782441, guid: 89aeb1623dd3fa246a20a2cf400d35ec, type: 3}
+  farm1: {fileID: 1846732188297825686, guid: 25c8640b342f80f4db4811d88d6c3833, type: 3}
+  mage: {fileID: 5774946434458264821, guid: 09e23142e31b3c84da6adb524aaa520a, type: 3}
   shopUI: {fileID: 222773589}
   infoUI: {fileID: 1515950492}
   buyFarm: {fileID: 525317010}
