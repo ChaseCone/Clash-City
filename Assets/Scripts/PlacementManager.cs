@@ -41,21 +41,28 @@ public class PlacementManager : MonoBehaviour
 
     public void PromptShop(GameObject clicked)
     {
+        if (shopUI.activeSelf == true)
+            currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
         currScript = clicked.GetComponent<ClickDetector>();
+        infoUI.SetActive(false);
         shopUI.SetActive(true);
-
-        //refScript.currTower = ClickDetector.TowerType.cannon;
-        //PlaceTower(clicked);
+        clicked.gameObject.GetComponent<Renderer>().material.color = Color.green;
     }
 
     public void PromptInfo(GameObject clicked)
     {
-
+        if (infoUI.activeSelf == true)
+            currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+        currScript = clicked.GetComponent<ClickDetector>();
+        infoUI.SetActive(true);
+        shopUI.SetActive(false);
+        clicked.gameObject.GetComponent<Renderer>().material.color = Color.green;
     }
 
     public void PlaceTower(GameObject clicked, ClickDetector.TowerType towerType)
     {
         GameObject tower;
+        currScript.currTower = towerType;
         if (towerType == ClickDetector.TowerType.cannon)
         {
             tower = Instantiate(cannon1, clicked.transform.position, clicked.transform.rotation);
@@ -81,29 +88,34 @@ public class PlacementManager : MonoBehaviour
     private void ExitShop()
     {
         shopUI.SetActive(false);
+        currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
     }
 
     private void BuyFarm()
     {
         PlaceTower(currScript.gameObject, ClickDetector.TowerType.farm);
         shopUI.SetActive(false);
+        currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
     }
 
     private void BuyCannon()
     {
         PlaceTower(currScript.gameObject, ClickDetector.TowerType.cannon);
         shopUI.SetActive(false);
+        currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
     }
 
     private void BuyCrossbow()
     {
         PlaceTower(currScript.gameObject, ClickDetector.TowerType.crossbow);
         shopUI.SetActive(false);
+        currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
     }
 
     private void BuyMage()
     {
         PlaceTower(currScript.gameObject, ClickDetector.TowerType.mage);
         shopUI.SetActive(false);
+        currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
     }
 }

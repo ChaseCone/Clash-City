@@ -19,6 +19,7 @@ public class ClickDetector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<Renderer>().material.color = Color.cyan;
         placementManager = GameObject.Find("PlacementManager");
         placementManagerScript = placementManager.GetComponent<PlacementManager>();
     }
