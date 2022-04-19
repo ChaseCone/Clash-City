@@ -17,8 +17,8 @@ public class HealthSystem
         health -= damageAmount;
     }
 
-    public void Heal(int healAmount)
+    /*public void Heal(int healAmount)
     {
         health += healAmount;
-    }
+    }*/
 }
