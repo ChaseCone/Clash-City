@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5787349509243635309}
   - component: {fileID: 5797247415238834317}
   - component: {fileID: 5869210189328415975}
+  - component: {fileID: 4392247068667010661}
   m_Layer: 0
   m_Name: MageTower
   m_TagString: Untagged
@@ -101,3 +102,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4392247068667010661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5774946434458264821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e00d0ab586eb14291f080c3ea21384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectilePrefab: {fileID: 3743605600337994097, guid: 683b28e7485379e42b7d86adb9767222, type: 3}

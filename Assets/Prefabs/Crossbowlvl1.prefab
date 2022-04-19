@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2754366414995214795}
   - component: {fileID: 2747077693299830613}
   - component: {fileID: 2819213900947778805}
+  - component: {fileID: -4995813695569494663}
   m_Layer: 0
   m_Name: Crossbowlvl1
   m_TagString: Untagged
@@ -101,3 +102,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-4995813695569494663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2760444882738782441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e00d0ab586eb14291f080c3ea21384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectilePrefab: {fileID: 5018594560630457101, guid: 2d78e95bf5024fb44a28779a0d525ef3, type: 3}
