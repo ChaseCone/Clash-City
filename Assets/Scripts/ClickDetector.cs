@@ -6,16 +6,23 @@ public class ClickDetector : MonoBehaviour
 {
     private GameObject placementManager;
     private PlacementManager placementManagerScript;
-    public int towerLevel = 0;
+
     public enum TowerType
     {
         none,
-        farm,
-        crossbow,
-        cannon,
+        farm1,
+        farm2,
+        farm3,
+        crossbow1,
+        crossbow2,
+        crossbow3,
+        cannon1,
+        cannon2,
+        cannon3,
         mage
     }
     public TowerType currTower = TowerType.none;
+    public GameObject placedTower;
     // Start is called before the first frame update
     void Start()
     {

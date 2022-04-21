@@ -21,7 +21,7 @@ public class Towers : MonoBehaviour
         {
             Instantiate(ProjectilePrefab, transform.position, ProjectilePrefab.transform.rotation);
             Cooldown = 1f / fireRate;
-
+            Cooldown = 3;
         }
         Cooldown -= Time.deltaTime;
     }

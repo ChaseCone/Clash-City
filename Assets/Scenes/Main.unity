@@ -5037,6 +5037,12 @@ MonoBehaviour:
   cannon1: {fileID: 4026056580554194715, guid: 5cabbf30296b27240b060316da05d062, type: 3}
   crossbow1: {fileID: 2760444882738782441, guid: 89aeb1623dd3fa246a20a2cf400d35ec, type: 3}
   farm1: {fileID: 1846732188297825686, guid: 25c8640b342f80f4db4811d88d6c3833, type: 3}
+  cannon2: {fileID: 8123737942262290319, guid: f2d73bdcdafc6ec429260fd38304ccc6, type: 3}
+  crossbow2: {fileID: 3277574851307204327, guid: f49b37e2fa92a89439c232eabf5944b1, type: 3}
+  farm2: {fileID: 2305541277917573429, guid: 15b364fc6cbe1944aae3bcb162fbe0e2, type: 3}
+  cannon3: {fileID: 3262688562133497492, guid: e2338138f3795d74b9b214af60fb27c8, type: 3}
+  crossbow3: {fileID: 8905007979557891529, guid: bf1043c13ebadba4b92712c941bbc48b, type: 3}
+  farm3: {fileID: 1513284304393429493, guid: ebd6cf6513b00114595756b7f1a11c2c, type: 3}
   mage: {fileID: 5774946434458264821, guid: 09e23142e31b3c84da6adb524aaa520a, type: 3}
   shopUI: {fileID: 222773589}
   infoUI: {fileID: 1515950492}
