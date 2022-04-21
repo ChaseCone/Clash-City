@@ -51,7 +51,7 @@ public class PlacementManager : MonoBehaviour
 
     public void PromptShop(GameObject clicked)
     {
-        if (shopUI.activeSelf == true)
+        if (shopUI.activeSelf == true || infoUI.activeSelf == true)
             currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
         currScript = clicked.GetComponent<ClickDetector>();
         infoUI.SetActive(false);
@@ -61,7 +61,7 @@ public class PlacementManager : MonoBehaviour
 
     public void PromptInfo(GameObject clicked)
     {
-        if (infoUI.activeSelf == true)
+        if (shopUI.activeSelf == true || infoUI.activeSelf == true)
             currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
         currScript = clicked.GetComponent<ClickDetector>();
         infoUI.SetActive(true);
