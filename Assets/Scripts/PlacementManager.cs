@@ -29,9 +29,28 @@ public class PlacementManager : MonoBehaviour
     public Button remove;
     public Button exitInfo;
 
+    GameObject currencyManager;
+    CurrencyManager currMan;
+
+    private int costToBuyFarm = 100;
+    private int costToBuyCrossbow = 50;
+    private int costToBuyCannon = 150;
+    private int costToBuyMage = 500;
+
+    private int costToBuyFarm2 = 300;
+    private int costToBuyCrossbow2 = 200;
+    private int costToBuyCannon2 = 400;
+
+    private int costToBuyFarm3 = 500;
+    private int costToBuyCrossbow3 = 400;
+    private int costToBuyCannon3 = 1000;
+
     // Start is called before the first frame update
     void Start()
     {
+        currencyManager = GameObject.Find("CurrencyManager");
+        currMan = currencyManager.GetComponent<CurrencyManager>();
+
         exitShop.onClick.AddListener(ExitShop);
         buyFarm.onClick.AddListener(BuyFarm);
         buyCannon.onClick.AddListener(BuyCannon);
@@ -46,7 +65,8 @@ public class PlacementManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Text buyFarmText = buyFarm.GetComponent<Text>();
+        buyFarmText.text = "hi";
     }
 
     public void PromptShop(GameObject clicked)
@@ -148,73 +168,122 @@ public class PlacementManager : MonoBehaviour
 
     private void Upgrade()
     {
+        bool ableTo = false;
         if (currScript.currTower == ClickDetector.TowerType.farm1)
         {
-            Destroy(currScript.placedTower);
-            currScript.currTower = ClickDetector.TowerType.farm2;
-            PlaceTower(currScript.gameObject, ClickDetector.TowerType.farm2);
+            if (currMan.GetCurrency() >= costToBuyFarm2)
+            {
+                currMan.subCurrency(costToBuyFarm2);
+                ableTo = true;
+                Destroy(currScript.placedTower);
+                currScript.currTower = ClickDetector.TowerType.farm2;
+                PlaceTower(currScript.gameObject, ClickDetector.TowerType.farm2);
+            }
         }
         else if (currScript.currTower == ClickDetector.TowerType.farm2)
         {
-            Destroy(currScript.placedTower);
-            currScript.currTower = ClickDetector.TowerType.farm3;
-            PlaceTower(currScript.gameObject, ClickDetector.TowerType.farm3);
+            if (currMan.GetCurrency() >= costToBuyFarm3)
+            {
+                currMan.subCurrency(costToBuyFarm3);
+                ableTo = true;
+                Destroy(currScript.placedTower);
+                currScript.currTower = ClickDetector.TowerType.farm3;
+                PlaceTower(currScript.gameObject, ClickDetector.TowerType.farm3);
+            }
         }
         else if (currScript.currTower == ClickDetector.TowerType.cannon1)
         {
-            Destroy(currScript.placedTower);
-            currScript.currTower = ClickDetector.TowerType.cannon2;
-            PlaceTower(currScript.gameObject, ClickDetector.TowerType.cannon2);
+            if (currMan.GetCurrency() >= costToBuyCannon2)
+            {
+                currMan.subCurrency(costToBuyCannon2);
+                ableTo = true;
+                Destroy(currScript.placedTower);
+                currScript.currTower = ClickDetector.TowerType.cannon2;
+                PlaceTower(currScript.gameObject, ClickDetector.TowerType.cannon2);
+            }
         }
         else if (currScript.currTower == ClickDetector.TowerType.cannon2)
         {
-            Destroy(currScript.placedTower);
-            currScript.currTower = ClickDetector.TowerType.cannon3;
-            PlaceTower(currScript.gameObject, ClickDetector.TowerType.cannon3);
+            if (currMan.GetCurrency() >= costToBuyCannon3)
+            {
+                currMan.subCurrency(costToBuyCannon3);
+                ableTo = true;
+                Destroy(currScript.placedTower);
+                currScript.currTower = ClickDetector.TowerType.cannon3;
+                PlaceTower(currScript.gameObject, ClickDetector.TowerType.cannon3);
+            }
         }
         else if (currScript.currTower == ClickDetector.TowerType.crossbow1)
         {
-            Destroy(currScript.placedTower);
-            currScript.currTower = ClickDetector.TowerType.crossbow2;
-            PlaceTower(currScript.gameObject, ClickDetector.TowerType.crossbow2);
+            if (currMan.GetCurrency() >= costToBuyCrossbow2)
+            {
+                currMan.subCurrency(costToBuyCrossbow2);
+                ableTo = true;
+                Destroy(currScript.placedTower);
+                currScript.currTower = ClickDetector.TowerType.crossbow2;
+                PlaceTower(currScript.gameObject, ClickDetector.TowerType.crossbow2);
+            }
         }
         else if (currScript.currTower == ClickDetector.TowerType.crossbow2)
         {
-            Destroy(currScript.placedTower);
-            currScript.currTower = ClickDetector.TowerType.crossbow3;
-            PlaceTower(currScript.gameObject, ClickDetector.TowerType.crossbow3);
+            if (currMan.GetCurrency() >= costToBuyCrossbow3)
+            {
+                currMan.subCurrency(costToBuyCrossbow3);
+                ableTo = true;
+                Destroy(currScript.placedTower);
+                currScript.currTower = ClickDetector.TowerType.crossbow3;
+                PlaceTower(currScript.gameObject, ClickDetector.TowerType.crossbow3);
+            }
         }
 
-
-        infoUI.SetActive(false);
-        currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+        if (ableTo == true)
+        {
+            infoUI.SetActive(false);
+            currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+        }
     }
 
     private void BuyFarm()
     {
-        PlaceTower(currScript.gameObject, ClickDetector.TowerType.farm1);
-        shopUI.SetActive(false);
-        currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+        if (currMan.GetCurrency() >= costToBuyFarm)
+        {
+            currMan.subCurrency(costToBuyFarm);
+            PlaceTower(currScript.gameObject, ClickDetector.TowerType.farm1);
+            shopUI.SetActive(false);
+            currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+        }
     }
 
     private void BuyCannon()
     {
-        PlaceTower(currScript.gameObject, ClickDetector.TowerType.cannon1);
-        shopUI.SetActive(false);
-        currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+        if (currMan.GetCurrency() >= costToBuyCannon)
+        {
+            currMan.subCurrency(costToBuyCannon);
+            PlaceTower(currScript.gameObject, ClickDetector.TowerType.cannon1);
+            shopUI.SetActive(false);
+            currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+        }
     }
 
     private void BuyCrossbow()
     {
-        PlaceTower(currScript.gameObject, ClickDetector.TowerType.crossbow1);
-        shopUI.SetActive(false);
-        currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+        if (currMan.GetCurrency() >= costToBuyCrossbow)
+        {
+            currMan.subCurrency(costToBuyCrossbow);
+            PlaceTower(currScript.gameObject, ClickDetector.TowerType.crossbow1);
+            shopUI.SetActive(false);
+            currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+        }
     }
 
     private void BuyMage()
     {
-        PlaceTower(currScript.gameObject, ClickDetector.TowerType.mage);
-        shopUI.SetActive(false);
-        currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+        if (currMan.GetCurrency() >= costToBuyMage)
+        {
+            currMan.subCurrency(costToBuyMage);
+            PlaceTower(currScript.gameObject, ClickDetector.TowerType.mage);
+            shopUI.SetActive(false);
+            currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
+        }
     }
 }
