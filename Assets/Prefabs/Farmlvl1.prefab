@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1861487338990787200}
   - component: {fileID: 1869176262049747314}
   - component: {fileID: 1799016444877898256}
+  - component: {fileID: 7971898469131487326}
   m_Layer: 0
   m_Name: Farmlvl1
   m_TagString: Untagged
@@ -101,3 +102,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7971898469131487326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846732188297825686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5afb289c694074409fed7d829763226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  farmLevel: 1
