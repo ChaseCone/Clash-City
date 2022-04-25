@@ -1,28 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
-    private int health;
-   public HealthSystem(int health)
-    {
-        this.health = health;
-    }
-
-    public int GetHealth()
-    {
-        return health;
-    }
-
-    public void Damage(int damageAmount)
-    {
-        health -= damageAmount;
-        if (health < 0)
-        {
-            health = 0;
-        }
-    }
+    private static Image HealthBarImage;
+    
+    
 
     /*public void Heal(int healAmount)
     {
