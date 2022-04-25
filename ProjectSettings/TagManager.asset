@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Empty
   - Full
+  - Enemy
   layers:
   - Default
   - TransparentFX
