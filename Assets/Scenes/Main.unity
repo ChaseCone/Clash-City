@@ -995,7 +995,7 @@ GameObject:
   - component: {fileID: 285426141}
   - component: {fileID: 285426140}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: tmp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2758,7 +2758,7 @@ GameObject:
   - component: {fileID: 977986391}
   - component: {fileID: 977986390}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: tmp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2803,7 +2803,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CROSSBOW
+  m_text: CROSSBOW- $50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3603,7 +3603,7 @@ GameObject:
   - component: {fileID: 1254675451}
   - component: {fileID: 1254675450}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: tmp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4464,7 +4464,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'FARM
+  m_text: 'FARM- "$100"
 
 '
   m_isRightToLeft: 0
@@ -5055,6 +5055,10 @@ MonoBehaviour:
   upgrade: {fileID: 1033299334}
   remove: {fileID: 314203802}
   exitInfo: {fileID: 185859869}
+  buyFarmButton: {fileID: 1512422192}
+  buyCrossbowButton: {fileID: 977986390}
+  buyCannonButton: {fileID: 285426140}
+  buyMageButton: {fileID: 1254675450}
 --- !u!4 &1719033222
 Transform:
   m_ObjectHideFlags: 0

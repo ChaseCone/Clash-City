@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlacementManager : MonoBehaviour
 {
@@ -45,6 +46,12 @@ public class PlacementManager : MonoBehaviour
     private int costToBuyCrossbow3 = 400;
     private int costToBuyCannon3 = 1000;
 
+    public TextMeshProUGUI buyFarmButton;
+    public TextMeshProUGUI buyCrossbowButton;
+    public TextMeshProUGUI buyCannonButton;
+    public TextMeshProUGUI buyMageButton;
+    public TextMeshProUGUI upgradeButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,13 +67,56 @@ public class PlacementManager : MonoBehaviour
         exitInfo.onClick.AddListener(ExitInfo);
         remove.onClick.AddListener(Remove);
         upgrade.onClick.AddListener(Upgrade);
+
+        buyFarmButton.text = "FARM- $" + costToBuyFarm;
+        buyCrossbowButton.text = "CROSSBOW- $" + costToBuyCrossbow;
+        buyCannonButton.text = "CANNON- $" + costToBuyCannon;
+        buyMageButton.text = "MAGE- $" + costToBuyMage;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Text buyFarmText = buyFarm.GetComponent<Text>();
-        buyFarmText.text = "hi";
+        if(infoUI.activeSelf == true && currScript.currTower == ClickDetector.TowerType.farm1)
+        {
+            upgradeButton.text = "UPGRADE- $" + costToBuyFarm2;
+        }
+        else if (infoUI.activeSelf == true && currScript.currTower == ClickDetector.TowerType.farm2)
+        {
+            upgradeButton.text = "UPGRADE- $" + costToBuyFarm3;
+        }
+        else if (infoUI.activeSelf == true && currScript.currTower == ClickDetector.TowerType.farm3)
+        {
+            upgradeButton.text = "MAX LEVEL";
+        }
+        else if (infoUI.activeSelf == true && currScript.currTower == ClickDetector.TowerType.crossbow1)
+        {
+            upgradeButton.text = "UPGRADE- $" + costToBuyCrossbow2;
+        }
+        else if (infoUI.activeSelf == true && currScript.currTower == ClickDetector.TowerType.crossbow2)
+        {
+            upgradeButton.text = "UPGRADE- $" + costToBuyCrossbow3;
+        }
+        else if (infoUI.activeSelf == true && currScript.currTower == ClickDetector.TowerType.crossbow3)
+        {
+            upgradeButton.text = "MAX LEVEL";
+        }
+        else if (infoUI.activeSelf == true && currScript.currTower == ClickDetector.TowerType.cannon1)
+        {
+            upgradeButton.text = "UPGRADE- $" + costToBuyCannon2;
+        }
+        else if (infoUI.activeSelf == true && currScript.currTower == ClickDetector.TowerType.cannon2)
+        {
+            upgradeButton.text = "UPGRADE- $" + costToBuyCannon3;
+        }
+        else if (infoUI.activeSelf == true && currScript.currTower == ClickDetector.TowerType.cannon3)
+        {
+            upgradeButton.text = "MAX LEVEL";
+        }
+        else
+        {
+            upgradeButton.text = "MAX LEVEL";
+        }
     }
 
     public void PromptShop(GameObject clicked)
@@ -179,6 +229,8 @@ public class PlacementManager : MonoBehaviour
                 currScript.currTower = ClickDetector.TowerType.farm2;
                 PlaceTower(currScript.gameObject, ClickDetector.TowerType.farm2);
             }
+            else
+                StartCoroutine(CantAfford());
         }
         else if (currScript.currTower == ClickDetector.TowerType.farm2)
         {
@@ -190,6 +242,8 @@ public class PlacementManager : MonoBehaviour
                 currScript.currTower = ClickDetector.TowerType.farm3;
                 PlaceTower(currScript.gameObject, ClickDetector.TowerType.farm3);
             }
+            else
+                StartCoroutine(CantAfford());
         }
         else if (currScript.currTower == ClickDetector.TowerType.cannon1)
         {
@@ -201,6 +255,8 @@ public class PlacementManager : MonoBehaviour
                 currScript.currTower = ClickDetector.TowerType.cannon2;
                 PlaceTower(currScript.gameObject, ClickDetector.TowerType.cannon2);
             }
+            else
+                StartCoroutine(CantAfford());
         }
         else if (currScript.currTower == ClickDetector.TowerType.cannon2)
         {
@@ -212,6 +268,8 @@ public class PlacementManager : MonoBehaviour
                 currScript.currTower = ClickDetector.TowerType.cannon3;
                 PlaceTower(currScript.gameObject, ClickDetector.TowerType.cannon3);
             }
+            else
+                StartCoroutine(CantAfford());
         }
         else if (currScript.currTower == ClickDetector.TowerType.crossbow1)
         {
@@ -223,6 +281,8 @@ public class PlacementManager : MonoBehaviour
                 currScript.currTower = ClickDetector.TowerType.crossbow2;
                 PlaceTower(currScript.gameObject, ClickDetector.TowerType.crossbow2);
             }
+            else
+                StartCoroutine(CantAfford());
         }
         else if (currScript.currTower == ClickDetector.TowerType.crossbow2)
         {
@@ -234,6 +294,8 @@ public class PlacementManager : MonoBehaviour
                 currScript.currTower = ClickDetector.TowerType.crossbow3;
                 PlaceTower(currScript.gameObject, ClickDetector.TowerType.crossbow3);
             }
+            else
+                StartCoroutine(CantAfford());
         }
 
         if (ableTo == true)
@@ -241,6 +303,22 @@ public class PlacementManager : MonoBehaviour
             infoUI.SetActive(false);
             currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
         }
+    }
+
+    IEnumerator CantAfford()
+    {
+        upgradeButton.color = Color.red;
+        buyFarmButton.color = Color.red;
+        buyCannonButton.color = Color.red;
+        buyCrossbowButton.color = Color.red;
+        buyMageButton.color = Color.red;
+        yield return new WaitForSeconds(1);
+        upgradeButton.color = Color.white;
+        buyFarmButton.color = Color.white;
+        buyCannonButton.color = Color.white;
+        buyCrossbowButton.color = Color.white;
+        buyMageButton.color = Color.white;
+        yield return null;
     }
 
     private void BuyFarm()
@@ -252,6 +330,8 @@ public class PlacementManager : MonoBehaviour
             shopUI.SetActive(false);
             currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
         }
+        else
+            StartCoroutine(CantAfford());
     }
 
     private void BuyCannon()
@@ -263,6 +343,8 @@ public class PlacementManager : MonoBehaviour
             shopUI.SetActive(false);
             currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
         }
+        else
+            StartCoroutine(CantAfford());
     }
 
     private void BuyCrossbow()
@@ -274,6 +356,8 @@ public class PlacementManager : MonoBehaviour
             shopUI.SetActive(false);
             currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
         }
+        else
+            StartCoroutine(CantAfford());
     }
 
     private void BuyMage()
@@ -285,5 +369,7 @@ public class PlacementManager : MonoBehaviour
             shopUI.SetActive(false);
             currScript.gameObject.GetComponent<Renderer>().material.color = Color.cyan;
         }
+        else
+            StartCoroutine(CantAfford());
     }
 }
