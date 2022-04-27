@@ -5,12 +5,12 @@ using TMPro;
 
 public class CurrencyManager : MonoBehaviour
 {
-    public int currency;
+    public int currency = 100;
     public TextMeshProUGUI currencyText;
     // Start is called before the first frame update
     void Start()
     {
-        currency = 0;
+
     }
 
     // Update is called once per frame

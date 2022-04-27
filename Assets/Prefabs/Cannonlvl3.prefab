@@ -1,49 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1155350809066852242
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2338186773998311537}
-  - component: {fileID: 3767979746658749027}
-  m_Layer: 0
-  m_Name: AOE
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2338186773998311537
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1155350809066852242}
-  m_LocalRotation: {x: -0, y: -0.97992474, z: 0.19936788, w: 0}
-  m_LocalPosition: {x: 0.822, y: 0.465, z: 0.388}
-  m_LocalScale: {x: 0.0066666664, y: 0.0066666664, z: 0.0066666664}
-  m_Children: []
-  m_Father: {fileID: 3265926196812789370}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3767979746658749027
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1155350809066852242}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 176.59753, y: 64.79268, z: 169.80042}
-  m_Center: {x: 87.79877, y: 31.89634, z: 84.40021}
 --- !u!1 &3262688562133497492
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,8 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.97992474, z: -0.19936788, w: 0}
   m_LocalPosition: {x: 185.43219, y: 0.000020742416, z: 717.4714}
   m_LocalScale: {x: 150, y: 150, z: 150}
-  m_Children:
-  - {fileID: 2338186773998311537}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 23, y: 180, z: 0}
