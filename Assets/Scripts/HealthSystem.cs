@@ -18,7 +18,7 @@ public class HealthSystem : MonoBehaviour
         {
             SetHealthBarColor(Color.red);
         }
-        else if (HealthBarImage.fillAmount < 0.5f)
+        else if (HealthBarImage.fillAmount < 0.55f)
         {
             SetHealthBarColor(Color.yellow);
         } else
