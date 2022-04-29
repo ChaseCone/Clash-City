@@ -8,18 +8,22 @@ public class Projectile : MonoBehaviour
     
     private float speed = 55.0f;
     Vector3 lookPostion;
-    public GameObject enemy;
+    private GameObject enemy;
+    private Towers towerScript;
     void Start()
     {
-        
+        towerScript=GameObject.Find("AOE").GetComponent<Towers>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        lookPostion = (enemy.transform.position-transform.position).normalized;
-        transform.Translate(lookPostion * Time.deltaTime * speed);
-        
+        enemy = towerScript.setEnemy;
+        if (towerScript.isEnemy)
+        {
+            lookPostion = (enemy.transform.position - transform.position).normalized;
+            transform.Translate(lookPostion * Time.deltaTime * speed);
+        }
     }
 
     public void OnTriggerEnter(Collider other)

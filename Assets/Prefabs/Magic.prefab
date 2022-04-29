@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 3963807749219257664}
   - component: {fileID: 417951664057287690}
   - component: {fileID: 5799870976185244974}
-  - component: {fileID: -2198365604265049901}
   m_Layer: 0
   m_Name: Magic
   m_TagString: Untagged
@@ -192,16 +191,3 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-2198365604265049901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3743605600337994097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ba68e68ae424db4b9cf76e3b4831a27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 1516751665653120275, guid: 191512293248b8642be0b527edd20ff4, type: 3}

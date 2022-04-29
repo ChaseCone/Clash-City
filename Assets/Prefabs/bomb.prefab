@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6318038455399520881}
   - component: {fileID: 3554737481959903642}
   - component: {fileID: 6305174768194480280}
-  - component: {fileID: -1389742768125664566}
+  - component: {fileID: 6926616988918087133}
   m_Layer: 0
   m_Name: bomb
   m_TagString: Untagged
@@ -92,12 +92,12 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900490364220330051}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-1389742768125664566
+--- !u!114 &6926616988918087133
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ba68e68ae424db4b9cf76e3b4831a27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1516751665653120275, guid: 191512293248b8642be0b527edd20ff4, type: 3}
+  enemy: {fileID: 0}
+  towerScript: {fileID: 0}
 --- !u!1 &3929902695714711204
 GameObject:
   m_ObjectHideFlags: 0
