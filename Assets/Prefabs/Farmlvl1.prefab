@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7971898469131487326}
   m_Layer: 0
   m_Name: Farmlvl1
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

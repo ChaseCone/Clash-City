@@ -101,6 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4444695180855720}
   - component: {fileID: 95025375702580604}
+  - component: {fileID: 7404784422692198005}
   m_Layer: 0
   m_Name: Polygonal Metalon Red
   m_TagString: Enemy
@@ -159,6 +160,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7404784422692198005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128758269040250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69dcdc349a22d954ba6415b4e42faf6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1130806907750044
 GameObject:
   m_ObjectHideFlags: 0
