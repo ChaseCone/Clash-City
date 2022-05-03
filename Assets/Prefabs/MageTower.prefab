@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1839850328487896528}
   - component: {fileID: 4356638608778788434}
+  - component: {fileID: 239920484271828770}
   m_Layer: 0
   m_Name: AOE
   m_TagString: Untagged
@@ -25,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2763044651061510213}
   m_LocalRotation: {x: -0, y: -0.7033845, z: -0.7108096, w: 0}
-  m_LocalPosition: {x: -0.000000101725256, y: 0.93, z: 0.44}
-  m_LocalScale: {x: 0.07354745, y: 0.016618663, z: 0.08853874}
+  m_LocalPosition: {x: 0.39, y: 0.23, z: -0.01}
+  m_LocalScale: {x: 0.07354745, y: 0.029242665, z: 0.08853874}
   m_Children: []
   m_Father: {fileID: 5779940976299791623}
   m_RootOrder: 0
@@ -42,8 +43,25 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 45.379578, y: 1, z: 34.53677}
-  m_Center: {x: 2.261508, y: -0.0000023179587, z: -16.768387}
+  m_Size: {x: 45.379578, y: 1.9884596, z: 24.073917}
+  m_Center: {x: 2.2615077, y: -0.49422565, z: -1.1970891}
+--- !u!114 &239920484271828770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2763044651061510213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e00d0ab586eb14291f080c3ea21384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectilePrefab: {fileID: 3743605600337994097, guid: 683b28e7485379e42b7d86adb9767222, type: 3}
+  fireRate: 3
+  Cooldown: 2
+  setEnemy: {fileID: 0}
+  isEnemy: 0
 --- !u!1 &5774946434458264821
 GameObject:
   m_ObjectHideFlags: 0

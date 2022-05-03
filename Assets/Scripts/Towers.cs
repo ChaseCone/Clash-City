@@ -36,7 +36,6 @@ public class Towers : MonoBehaviour
             setEnemy = other.gameObject;
             isEnemy = true;
 
-
         }
     }
 
