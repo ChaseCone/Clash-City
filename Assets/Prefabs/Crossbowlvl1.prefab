@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2754366414995214795}
   - component: {fileID: 2747077693299830613}
   - component: {fileID: 2819213900947778805}
-  - component: {fileID: -4995813695569494663}
   m_Layer: 0
   m_Name: Crossbowlvl1
   m_TagString: Tower
@@ -27,13 +26,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2760444882738782441}
-  m_LocalRotation: {x: 0, y: 0.97992474, z: -0.19936788, w: 0}
+  m_LocalRotation: {x: -0, y: 0.99997413, z: 0.007195065, w: 0}
   m_LocalPosition: {x: 186.49847, y: 0.000030517578, z: 716.95654}
   m_LocalScale: {x: 150, y: 150, z: 150}
-  m_Children: []
+  m_Children:
+  - {fileID: 7588918088838462756}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 23, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.825, y: 180, z: 0}
 --- !u!33 &2754366414995214795
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -102,18 +102,65 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-4995813695569494663
+--- !u!1 &5140142581609812093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7588918088838462756}
+  - component: {fileID: 1024871598705799454}
+  - component: {fileID: 7484969298555673672}
+  m_Layer: 0
+  m_Name: AOE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7588918088838462756
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140142581609812093}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.3595, y: 1, z: 1.1723}
+  m_Children: []
+  m_Father: {fileID: 2764177025692182675}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1024871598705799454
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140142581609812093}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5602393, z: 1}
+  m_Center: {x: 0, y: -0.21988136, z: 1.0056067e-11}
+--- !u!114 &7484969298555673672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2760444882738782441}
+  m_GameObject: {fileID: 5140142581609812093}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5e00d0ab586eb14291f080c3ea21384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectilePrefab: {fileID: 5018594560630457101, guid: 2d78e95bf5024fb44a28779a0d525ef3, type: 3}
+  ProjectilePrefab: {fileID: 0}
   fireRate: 3
   Cooldown: 2
+  setEnemy: {fileID: 0}
+  isEnemy: 0
