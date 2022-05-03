@@ -32,7 +32,7 @@ public class Projectile : MonoBehaviour
         {
             Destroy(enemy);
             Destroy(gameObject);
-
+            towerScript.isEnemy = false;
         }
 
     }
