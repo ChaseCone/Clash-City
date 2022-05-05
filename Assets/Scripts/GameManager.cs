@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class GameManager : MonoBehaviour
     public GameObject spawnLocation4;
     public GameObject spawnLocation5;
     public GameObject spawnLocation6;
-    private int wave = 1;
+    private int wave = 0;
+    public TextMeshProUGUI waveText;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        waveText.text = "Wave: " + wave;
         int enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
         if(enemyCount == 0)
         {
@@ -35,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     void SpawnRound()
     {
-        int enemiesToSpawn = wave * 3;
+        int enemiesToSpawn = wave * 3 + 1;
         for (int i = 0; i < enemiesToSpawn; i++)
         {
             GameObject spawnSpot;
