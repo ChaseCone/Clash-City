@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -18,21 +19,28 @@ public class GameManager : MonoBehaviour
     public GameObject spawnLocation5;
     public GameObject spawnLocation6;
     private int wave = 0;
+    public bool gameStarted= false;
     public TextMeshProUGUI waveText;
+    public GameObject startCanvas;
+    public GameObject mainCanvas;
+    public Button startButton;
     // Start is called before the first frame update
     void Start()
     {
-        
+        startButton.onClick.AddListener(StartGame);
     }
 
     // Update is called once per frame
     void Update()
     {
-        waveText.text = "Wave: " + wave;
-        int enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        if(enemyCount == 0)
+        if (gameStarted == true)
         {
-            SpawnRound();
+            waveText.text = "Wave: " + wave;
+            int enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+            if (enemyCount == 0)
+            {
+                SpawnRound();
+            }
         }
     }
 
@@ -73,5 +81,12 @@ public class GameManager : MonoBehaviour
             Instantiate(enemySpawn, spawnSpot.transform.position, enemySpawn.transform.rotation);
         }
         wave++;
+    }
+
+    void StartGame()
+    {
+        gameStarted = true;
+        startCanvas.SetActive(false);
+        mainCanvas.SetActive(true);
     }
 }
