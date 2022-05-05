@@ -24,12 +24,12 @@ public class EnemyMove : MonoBehaviour
         {
             if(Vector3.Distance(gameObject.transform.position, currTower.transform.position) < distanceToTower)
             {
-                distanceToTower = Vector3.Distance(gameObject.transform.position, currTower.transform.position);
                 nearestTower = currTower;
+                distanceToTower = Vector3.Distance(gameObject.transform.position, currTower.transform.position);
                 if(currTower != currTarget)
                 {
                     currTarget = currTower;
-                    destination = Random.Range(nearestTower.transform.position.x - 40, nearestTower.transform.position.x + 40);
+                    destination = Random.Range(-40, 40);
                 }
             }
         }
