@@ -91,7 +91,7 @@ Transform:
   m_GameObject: {fileID: 1067925524328404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalScale: {x: 30, y: 30, z: 30}
   m_Children:
   - {fileID: 4595271056636968}
   - {fileID: 4413730522853366}
@@ -129,6 +129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69dcdc349a22d954ba6415b4e42faf6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 25
+  health: 15
+  coinsOnKill: 25
 --- !u!54 &186898996084060320
 Rigidbody:
   m_ObjectHideFlags: 0

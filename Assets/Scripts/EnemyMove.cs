@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    private float speed = 50;
+    public float speed = 50;
+    public int health = 3;
+    public int coinsOnKill = 10;
     private GameObject currTarget = null;
     private float destination;
+    private bool canHit = true;
+    private int hitCoolDown;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +40,13 @@ public class EnemyMove : MonoBehaviour
 
         transform.LookAt(nearestTower.transform);
         Debug.DrawLine(gameObject.transform.position, nearestTower.transform.position, Color.red);
-        transform.Translate((nearestTower.transform.position - transform.position + new Vector3(destination, 0, 35)).normalized * speed * Time.deltaTime, Space.World);
+        Vector3 move = new Vector3(nearestTower.transform.position.x - transform.position.x + destination, nearestTower.transform.position.y - transform.position.y, nearestTower.transform.position.z - transform.position.z + 35);
+        transform.Translate(move.normalized * speed * Time.deltaTime, Space.World);
+
+        if (move.x <= 1 && move.y <= 1 && move.z <= 1)
+        {
+            currTarget.GetComponent<TowerManager>().Hit(1);
+        }
 
     }
 }

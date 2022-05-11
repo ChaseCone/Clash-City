@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 8927960452078637347}
   - component: {fileID: 8918416877897784157}
   - component: {fileID: 8846282454293972439}
+  - component: {fileID: 4765406406213830396}
   m_Layer: 0
   m_Name: Crossbowlvl3
   m_TagString: Tower
@@ -88,7 +89,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8905007979557891529}
-  m_LocalRotation: {x: -0, y: 0.99986994, z: -0.016130917, w: 0}
+  m_LocalRotation: {x: 0, y: 0.9998698, z: -0.016134843, w: 0}
   m_LocalPosition: {x: 185.48071, y: 0.000027656555, z: 716.88135}
   m_LocalScale: {x: 150, y: 150, z: 150}
   m_Children:
@@ -164,3 +165,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4765406406213830396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8905007979557891529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d2e892aeafe9746809c8dd7b5cae85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  health: 0

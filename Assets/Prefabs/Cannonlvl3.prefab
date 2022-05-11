@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 3259149100409266832}
   - component: {fileID: 3247230674611070534}
   - component: {fileID: 3175215049426683856}
+  - component: {fileID: 7809543320671763032}
   m_Layer: 0
   m_Name: Cannonlvl3
   m_TagString: Tower
@@ -88,7 +89,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3262688562133497492}
-  m_LocalRotation: {x: -0, y: 0.9965667, z: -0.082793996, w: 0}
+  m_LocalRotation: {x: 0, y: 0.99656695, z: -0.08279083, w: 0}
   m_LocalPosition: {x: 185.43219, y: 0.000020742416, z: 717.4714}
   m_LocalScale: {x: 158.28694, y: 219.225, z: 258.79037}
   m_Children:
@@ -164,3 +165,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7809543320671763032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3262688562133497492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d2e892aeafe9746809c8dd7b5cae85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  health: 0
