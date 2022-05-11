@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HealthSystem : MonoBehaviour
 {
     private static Image HealthBarImage;
+    private Health health;
     
     public static void SetHealthBarColor(Color healthColor)
     {
@@ -43,9 +44,14 @@ public class HealthSystem : MonoBehaviour
         HealthBarImage = GetComponent<Image>();
     }
 
+    public void Setup (Health health)
+    {
+        this.health = health;
+    }
+
     // Update is called once per frame
     void Update()
     {
-
+        transform.Find("healthBar").localScale = new Vector3(health.GetHealthPercent(), 1);
     }
 }
