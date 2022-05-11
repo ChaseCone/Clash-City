@@ -50,8 +50,16 @@ public class HealthSystem : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        transform.Find("healthBar").localScale = new Vector3(health.GetHealthPercent(), 1);
+        //GameObject bar = GameObject.Find("HealthBar");
+        //Debug.Log("Health" + (health == null));
+        //Debug.Log("Bar" + bar == null);
+
+        // GameObject.Find("HealthBar").transform.localScale = new Vector3(health.GetHealthPercent(), 1);
+        gameObject.transform.localScale = new Vector3(health.GetHealthPercent(), 1);
+       // gameObject.transform.localScale = new Vector3(1,1,1);
+
+
     }
 }
