@@ -47,7 +47,7 @@ public class EnemyMove : MonoBehaviour
         hitTimer += Time.deltaTime;
         if (move.x <= 1 && move.y <= 1 && move.z <= 1 && hitTimer >= hitCoolDown)
         {
-            currTarget.GetComponent<TowerManager>().Hit(1);
+            nearestTower.GetComponent<TowerManager>().Hit(1);
             hitTimer = 0;
         }
 
