@@ -52,6 +52,8 @@ public class PlacementManager : MonoBehaviour
     public TextMeshProUGUI buyMageButton;
     public TextMeshProUGUI upgradeButton;
 
+    public TextMeshProUGUI stats;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +79,8 @@ public class PlacementManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        stats.text = "Stats \n Speed- \n Health- ";
         if(infoUI.activeSelf == true && currScript.currTower == ClickDetector.TowerType.farm1)
         {
             upgradeButton.text = "UPGRADE- $" + costToBuyFarm2;

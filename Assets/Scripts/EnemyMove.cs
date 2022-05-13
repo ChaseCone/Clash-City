@@ -5,16 +5,17 @@ using UnityEngine;
 public class EnemyMove : MonoBehaviour
 {
     public float speed = 50;
-    public int health = 3;
+    public int maxHealth = 3;
+    public int health;
     public int coinsOnKill = 10;
     private GameObject currTarget = null;
     private float destination;
-    private bool canHit = true;
-    private int hitCoolDown;
+    private float hitTimer = 0;
+    public  int hitCoolDown = 2;
     // Start is called before the first frame update
     void Start()
     {
-        
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -43,9 +44,11 @@ public class EnemyMove : MonoBehaviour
         Vector3 move = new Vector3(nearestTower.transform.position.x - transform.position.x + destination, nearestTower.transform.position.y - transform.position.y, nearestTower.transform.position.z - transform.position.z + 35);
         transform.Translate(move.normalized * speed * Time.deltaTime, Space.World);
 
-        if (move.x <= 1 && move.y <= 1 && move.z <= 1)
+        hitTimer += Time.deltaTime;
+        if (move.x <= 1 && move.y <= 1 && move.z <= 1 && hitTimer >= hitCoolDown)
         {
             currTarget.GetComponent<TowerManager>().Hit(1);
+            hitTimer = 0;
         }
 
     }

@@ -1895,7 +1895,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1307197334}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -4629,6 +4629,7 @@ RectTransform:
   - {fileID: 222773590}
   - {fileID: 1515950493}
   - {fileID: 567275867}
+  - {fileID: 434510937}
   - {fileID: 412319895}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -6053,6 +6054,7 @@ MonoBehaviour:
   buyCannonButton: {fileID: 285426140}
   buyMageButton: {fileID: 1254675450}
   upgradeButton: {fileID: 501807496}
+  stats: {fileID: 77388508}
 --- !u!4 &1719033222
 Transform:
   m_ObjectHideFlags: 0
