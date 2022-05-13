@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 33683378825198272}
   - component: {fileID: 23547881525324402}
   - component: {fileID: 95311731040993008}
+  - component: {fileID: 823428506}
+  - component: {fileID: 5873515919691631228}
   m_Layer: 0
   m_Name: house_lvl7
   m_TagString: Tower
@@ -101,3 +103,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &823428506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829272864192424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d2e892aeafe9746809c8dd7b5cae85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 20
+  health: 0
+--- !u!114 &5873515919691631228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829272864192424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7374e6e342676954a8d54eb2e4a1db46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

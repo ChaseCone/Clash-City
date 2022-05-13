@@ -773,8 +773,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
+  maxHealth: 3
   health: 8
   coinsOnKill: 15
+  hitCoolDown: 2
+  currencyManager: {fileID: 0}
 --- !u!54 &4227265934168845032
 Rigidbody:
   m_ObjectHideFlags: 0
