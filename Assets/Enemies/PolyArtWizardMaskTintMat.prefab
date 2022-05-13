@@ -703,6 +703,7 @@ GameObject:
   - component: {fileID: 7147911880717263687}
   - component: {fileID: 7170297281311711513}
   - component: {fileID: 7090395636256601176}
+  - component: {fileID: 4227265934168845032}
   m_Layer: 0
   m_Name: PolyArtWizardMaskTintMat
   m_TagString: Enemy
@@ -774,6 +775,22 @@ MonoBehaviour:
   speed: 50
   health: 8
   coinsOnKill: 15
+--- !u!54 &4227265934168845032
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088900280031375689}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7088901754615960511
 GameObject:
   m_ObjectHideFlags: 0
