@@ -9,9 +9,8 @@ public class HealthTest : MonoBehaviour
     void Start()
     {
         //HealthSystem.SetHealthBarValue(1);
-        Health health = new Health(100);
            // Debug.Log("system: " + (healthSystem == null));
-        healthSystem.Setup(health);
+       // healthSystem.Setup(health);
     }
 
     // Update is called once per frame

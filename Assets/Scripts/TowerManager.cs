@@ -24,5 +24,15 @@ public class TowerManager : MonoBehaviour
     public void Hit(int damage)
     {
         health -= damage;
+        
+    }
+
+    public int GetHealth()
+    {
+        return health;
+    }
+    public float GetHealthPercent()
+    {
+        return (float)health / maxHealth;
     }
 }

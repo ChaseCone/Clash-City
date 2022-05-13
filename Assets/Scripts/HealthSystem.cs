@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class HealthSystem : MonoBehaviour
 {
     private static Image HealthBarImage;
-    private Health health;
-    
+    private TowerManager health;
+
     public static void SetHealthBarColor(Color healthColor)
     {
         HealthBarImage.color = healthColor;
@@ -28,6 +28,7 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
+ 
     public static float GetHealthBarValue()
     {
         return HealthBarImage.fillAmount;
@@ -44,7 +45,7 @@ public class HealthSystem : MonoBehaviour
         HealthBarImage = GetComponent<Image>();
     }
 
-    public void Setup (Health health)
+    public void Setup (TowerManager health)
     {
         this.health = health;
     }
