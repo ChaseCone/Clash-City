@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4864194665163174544}
   - component: {fileID: 8891729253400054682}
-  - component: {fileID: 2990571883737059899}
   m_Layer: 0
   m_Name: AOE
   m_TagString: Untagged
@@ -45,26 +44,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2990571883737059899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5120218043648624942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5e00d0ab586eb14291f080c3ea21384, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ProjectilePrefab: {fileID: 4104065917844904418, guid: 3b6d30a257ed9a24cb09730402203efe, type: 3}
-  fireRate: 3
-  Cooldown: 2
-  setEnemy: {fileID: 0}
-  isEnemy: 0
-  En: []
-  num: 0
-  radius: 50
 --- !u!1 &8905007979557891529
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,6 +57,7 @@ GameObject:
   - component: {fileID: 8918416877897784157}
   - component: {fileID: 8846282454293972439}
   - component: {fileID: 4765406406213830396}
+  - component: {fileID: 6187263361490379256}
   m_Layer: 0
   m_Name: Crossbowlvl3
   m_TagString: Tower
@@ -180,5 +160,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d2e892aeafe9746809c8dd7b5cae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
+  maxHealth: 60
   health: 0
+--- !u!114 &6187263361490379256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8905007979557891529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e00d0ab586eb14291f080c3ea21384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectilePrefab: {fileID: 4104065917844904418, guid: 3b6d30a257ed9a24cb09730402203efe, type: 3}
+  fireRate: 3
+  Cooldown: 2
+  setEnemy: {fileID: 0}
+  isEnemy: 0
+  En: []
+  num: 0
+  radius: 50
