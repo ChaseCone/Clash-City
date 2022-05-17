@@ -9,6 +9,9 @@ public class TowerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Transform bar = transform.Find("Healthbar");
+        HealthSystem hs = bar.GetComponent<HealthSystem>();
+        hs.Setup(this);
         health = maxHealth;
     }
 
