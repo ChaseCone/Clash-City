@@ -12,10 +12,14 @@ public class EnemyMove : MonoBehaviour
     private float destination;
     private float hitTimer = 0;
     public  int hitCoolDown = 2;
+    public GameObject currencyManager;
+    private CurrencyManager manager;
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
+        currencyManager = GameObject.Find("CurrencyManager");
+        manager = currencyManager.GetComponent<CurrencyManager>();
     }
 
     // Update is called once per frame
@@ -39,16 +43,19 @@ public class EnemyMove : MonoBehaviour
             }
         }
 
-        transform.LookAt(nearestTower.transform);
-        Debug.DrawLine(gameObject.transform.position, nearestTower.transform.position, Color.red);
-        Vector3 move = new Vector3(nearestTower.transform.position.x - transform.position.x + destination, nearestTower.transform.position.y - transform.position.y, nearestTower.transform.position.z - transform.position.z + 35);
-        transform.Translate(move.normalized * speed * Time.deltaTime, Space.World);
-
-        hitTimer += Time.deltaTime;
-        if (move.x <= 1 && move.y <= 1 && move.z <= 1 && hitTimer >= hitCoolDown)
+        if (nearestTower != null)
         {
-            nearestTower.GetComponent<TowerManager>().Hit(1);
-            hitTimer = 0;
+            transform.LookAt(nearestTower.transform);
+            Debug.DrawLine(gameObject.transform.position, nearestTower.transform.position, Color.red);
+            Vector3 move = new Vector3(nearestTower.transform.position.x - transform.position.x + destination, nearestTower.transform.position.y - transform.position.y, nearestTower.transform.position.z - transform.position.z + 35);
+            transform.Translate(move.normalized * speed * Time.deltaTime, Space.World);
+
+            hitTimer += Time.deltaTime;
+            if (move.x <= 1 && move.y <= 1 && move.z <= 1 && hitTimer >= hitCoolDown)
+            {
+                nearestTower.GetComponent<TowerManager>().Hit(1);
+                hitTimer = 0;
+            }
         }
 
         if (health == 0)
@@ -57,5 +64,10 @@ public class EnemyMove : MonoBehaviour
         
         }
 
+    }
+
+    private void OnDestroy()
+    {
+        manager.addCurrency(coinsOnKill);
     }
 }
