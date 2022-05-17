@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,10 +25,14 @@ public class GameManager : MonoBehaviour
     public GameObject startCanvas;
     public GameObject mainCanvas;
     public Button startButton;
+
+    public GameObject endCanvas;
+    public Button restartButton;
     // Start is called before the first frame update
     void Start()
     {
         startButton.onClick.AddListener(StartGame);
+        restartButton.onClick.AddListener(RestartGame);
     }
 
     // Update is called once per frame
@@ -42,6 +47,17 @@ public class GameManager : MonoBehaviour
                 SpawnRound();
             }
         }
+    }
+
+    public void GameOver()
+    {
+        mainCanvas.SetActive(false);
+        endCanvas.SetActive(true);
+    }
+
+    void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     void SpawnRound()

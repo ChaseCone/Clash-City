@@ -7,13 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class GameEnder : MonoBehaviour
 {
-    public GameObject mainCanvas;
-    public GameObject endCanvas;
-    public Button restartButton;
+    public GameObject gameManager;
     // Start is called before the first frame update
     void Start()
     {
-        restartButton.onClick.AddListener(RestartGame);
+
     }
 
     // Update is called once per frame
@@ -22,15 +20,9 @@ public class GameEnder : MonoBehaviour
        
     }
 
-    void RestartGame()
-    {
-        Debug.Log("restarting");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
 
     private void OnDestroy()
     {
-        mainCanvas.SetActive(false);
-        endCanvas.SetActive(true);
+        gameManager.GetComponent<GameManager>().GameOver();
     }
 }
