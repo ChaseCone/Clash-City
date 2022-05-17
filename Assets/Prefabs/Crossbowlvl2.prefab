@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3246928666708132423}
   - component: {fileID: 3253935221190168597}
   - component: {fileID: 3181855239889146261}
-  - component: {fileID: 3620625180077468872}
+  - component: {fileID: 1938502150330932377}
+  - component: {fileID: 4544598517828024030}
   m_Layer: 0
   m_Name: Crossbowlvl2
   m_TagString: Tower
@@ -103,7 +104,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3620625180077468872
+--- !u!114 &1938502150330932377
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,6 +118,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   health: 0
+--- !u!114 &4544598517828024030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3277574851307204327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e00d0ab586eb14291f080c3ea21384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectilePrefab: {fileID: 4104065917844904418, guid: 3b6d30a257ed9a24cb09730402203efe, type: 3}
+  fireRate: 3
+  Cooldown: 2
+  setEnemy: {fileID: 0}
+  isEnemy: 0
+  En: []
+  num: 0
+  radius: 50
 --- !u!1 &7617475455500791153
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,14 +148,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3786256485530411281}
   - component: {fileID: 6070217885756200376}
-  - component: {fileID: 5030828610931368891}
   m_Layer: 0
   m_Name: AOE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3786256485530411281
 Transform:
   m_ObjectHideFlags: 0
@@ -162,20 +182,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5030828610931368891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7617475455500791153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5e00d0ab586eb14291f080c3ea21384, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ProjectilePrefab: {fileID: 4104065917844904418, guid: 3b6d30a257ed9a24cb09730402203efe, type: 3}
-  fireRate: 3
-  Cooldown: 2
-  setEnemy: {fileID: 0}
-  isEnemy: 0

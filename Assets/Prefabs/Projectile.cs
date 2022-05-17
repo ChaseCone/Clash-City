@@ -14,13 +14,13 @@ public class Projectile : MonoBehaviour
     public int dmg = 1;
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-     
+
         
             lookPostion = (enemy.transform.position - transform.position).normalized;
             transform.Translate(lookPostion * Time.deltaTime * speed);
@@ -33,8 +33,9 @@ public class Projectile : MonoBehaviour
         {
           
             Destroy(gameObject);
-            foe.health -= dmg;
+            enemy.GetComponent<EnemyMove>().health -= dmg;
             
+                
            
         }
 

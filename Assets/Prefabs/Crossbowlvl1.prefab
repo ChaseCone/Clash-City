@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2747077693299830613}
   - component: {fileID: 2819213900947778805}
   - component: {fileID: 6896439174447838248}
+  - component: {fileID: 7998071730257225144}
   m_Layer: 0
   m_Name: Crossbowlvl1
   m_TagString: Tower
@@ -117,6 +118,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   health: 0
+--- !u!114 &7998071730257225144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2760444882738782441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e00d0ab586eb14291f080c3ea21384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectilePrefab: {fileID: 4104065917844904418, guid: 3b6d30a257ed9a24cb09730402203efe, type: 3}
+  fireRate: 3
+  Cooldown: 2
+  setEnemy: {fileID: 0}
+  isEnemy: 0
+  En: []
+  num: 0
+  radius: 50
 --- !u!1 &5140142581609812093
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +148,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7588918088838462756}
   - component: {fileID: 1024871598705799454}
-  - component: {fileID: 7484969298555673672}
   m_Layer: 0
   m_Name: AOE
   m_TagString: Untagged
@@ -162,23 +182,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5602393, z: 1}
   m_Center: {x: 0, y: -0.21988136, z: 1.0056067e-11}
---- !u!114 &7484969298555673672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5140142581609812093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5e00d0ab586eb14291f080c3ea21384, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ProjectilePrefab: {fileID: 4104065917844904418, guid: 3b6d30a257ed9a24cb09730402203efe, type: 3}
-  fireRate: 3
-  Cooldown: 2
-  setEnemy: {fileID: 0}
-  isEnemy: 0
-  En: []
-  num: 0
-  radius: 50

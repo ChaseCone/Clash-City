@@ -14,7 +14,7 @@ public class Towers : MonoBehaviour
     public int num = 0;
     public float radius = 50;
     private Projectile p;
-
+   
 
     // Start is called before the first frame update
     void Start()
@@ -40,11 +40,7 @@ public class Towers : MonoBehaviour
                     Cooldown = 3;
                     p = g.GetComponent<Projectile>();
                     p.enemy = En[0];
-                    //if (En.Length > 1 && En[num] == null)
-                    //{
-                    //    num++;
-                    //    setEnemy = En[num];
-                    //}
+                    
 
                 }
                 Cooldown -= Time.deltaTime;
