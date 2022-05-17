@@ -11,7 +11,10 @@ public class Towers : MonoBehaviour
     public bool isEnemy = false;
     private List<GameObject> targets = new List<GameObject>();
     public GameObject[] En;
-    public int num;
+    public int num = 0;
+    public float radius = 50;
+    private Projectile p;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,45 +25,57 @@ public class Towers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Cooldown <= 0f && isEnemy == true)
+        En = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject e in En)
         {
-
-            Instantiate(ProjectilePrefab, transform.position, ProjectilePrefab.transform.rotation);
-
-            Cooldown = 1f / fireRate;
-            Cooldown = 3;
-            En = targets.ToArray();
-            setEnemy = En[0];
-            if (En.Length > 1 && En[num] == null)
+            if (Vector3.Distance(gameObject.transform.position, e.transform.position) <= radius)
             {
-                num++;
-                setEnemy = En[num];
+                isEnemy = true;
+                if (Cooldown <= 0f && isEnemy == true)
+                {
+
+                    GameObject g = Instantiate(ProjectilePrefab, transform.position, ProjectilePrefab.transform.rotation);
+
+                    Cooldown = 1f / fireRate;
+                    Cooldown = 3;
+                    p = g.GetComponent<Projectile>();
+                    p.enemy = En[0];
+                    //if (En.Length > 1 && En[num] == null)
+                    //{
+                    //    num++;
+                    //    setEnemy = En[num];
+                    //}
+
+                }
+                Cooldown -= Time.deltaTime;
+
             }
-
         }
-        Cooldown -= Time.deltaTime;
+
+
 
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
-
-            Debug.Log("Yes");
-            targets.Add(other.gameObject);
-            isEnemy = true;
-
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (targets.Contains(other.gameObject))
-        {
-            targets.Remove(other.gameObject);
-        }
-    }
-
 }
+
+
+   //private void OnTriggerEnter(Collider other)
+   //{
+   //  if (other.CompareTag("Enemy"))
+   //   {
+
+//   Debug.Log("Yes");
+//      targets.Add(other.gameObject);
+//      isEnemy = true;
+
+//    }
+// }*
+// private void OnTriggerExit(Collider other)
+// {
+//     if (targets.Contains(other.gameObject))
+//     {
+//    targets.Remove(other.gameObject);
+//    }
+// }
+
+//}
 

@@ -134,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7588918088838462756
 Transform:
   m_ObjectHideFlags: 0
@@ -179,3 +179,6 @@ MonoBehaviour:
   Cooldown: 2
   setEnemy: {fileID: 0}
   isEnemy: 0
+  En: []
+  num: 0
+  radius: 50

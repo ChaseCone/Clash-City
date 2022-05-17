@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1351676626388328881
 Transform:
   m_ObjectHideFlags: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820801886772670454}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5e00d0ab586eb14291f080c3ea21384, type: 3}
   m_Name: 
@@ -64,6 +64,7 @@ MonoBehaviour:
   isEnemy: 0
   En: []
   num: 0
+  radius: 30
 --- !u!1 &4026056580554194715
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,6 +78,9 @@ GameObject:
   - component: {fileID: 4002263053022703275}
   - component: {fileID: 3930372730100681047}
   - component: {fileID: 1364095686520487610}
+  - component: {fileID: 8246098206558901036}
+  - component: {fileID: -5952526460627082187}
+  - component: {fileID: -8505124703967031127}
   m_Layer: 0
   m_Name: Cannonlvl1
   m_TagString: Tower
@@ -179,5 +183,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d2e892aeafe9746809c8dd7b5cae85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 3
-  health: 0
+  maxHealth: 15000
+  health: 15000
+--- !u!114 &8246098206558901036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4026056580554194715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e00d0ab586eb14291f080c3ea21384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectilePrefab: {fileID: 1900490364220330051, guid: c3379d56da4a4e24abca69475c394ee4, type: 3}
+  fireRate: 3
+  Cooldown: 2
+  setEnemy: {fileID: 0}
+  isEnemy: 0
+  En: []
+  num: 0
+  radius: 50
+--- !u!54 &-5952526460627082187
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4026056580554194715}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &-8505124703967031127
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4026056580554194715}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36901644, y: 0.55350465, z: 0.36901644}
+  m_Center: {x: -0.00000004470348, y: 0.27675226, z: -0.00000001490116}

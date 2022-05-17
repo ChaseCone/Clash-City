@@ -8,32 +8,34 @@ public class Projectile : MonoBehaviour
 
     private float speed = 55.0f;
     Vector3 lookPostion;
-    private GameObject enemy;
-    private Towers towerScript;
+    public GameObject enemy;
+    public Towers towerScript;
+    public EnemyMove foe;
+    public int dmg = 1;
     void Start()
     {
-        towerScript = GameObject.Find("AOE").GetComponent<Towers>();
+       
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        enemy = towerScript.setEnemy;
-        if (towerScript.isEnemy && towerScript.setEnemy != null)
-        {
+     
+        
             lookPostion = (enemy.transform.position - transform.position).normalized;
             transform.Translate(lookPostion * Time.deltaTime * speed);
-        }
+       
     }
 
     public void OnTriggerEnter(Collider other)
     {
         if (enemy == other.gameObject)
         {
-            Destroy(enemy);
+          
             Destroy(gameObject);
-            towerScript.isEnemy = false;
-            towerScript.setEnemy = null;
+            foe.health -= dmg;
+            
+           
         }
 
     }

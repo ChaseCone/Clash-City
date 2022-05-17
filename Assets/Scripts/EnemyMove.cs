@@ -51,5 +51,11 @@ public class EnemyMove : MonoBehaviour
             hitTimer = 0;
         }
 
+        if (health == 0)
+        {
+            Destroy(gameObject);
+        
+        }
+
     }
 }
