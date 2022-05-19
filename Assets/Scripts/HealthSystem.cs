@@ -58,9 +58,10 @@ public class HealthSystem : MonoBehaviour
         //Debug.Log("Bar" + bar == null);
 
         // GameObject.Find("HealthBar").transform.localScale = new Vector3(health.GetHealthPercent(), 1);
-        gameObject.transform.localScale = new Vector3(health.GetHealthPercent(), 1);
-       // gameObject.transform.localScale = new Vector3(1,1,1);
-
+        //gameObject.transform.localScale = new Vector3(health.GetHealthPercent(), 1);
+        // gameObject.transform.localScale = new Vector3(1,1,1);
+        SetHealthBarValue(health.GetHealthPercent());
+        Debug.Log("Health Percentage: " + health.GetHealthPercent());
 
     }
 }
