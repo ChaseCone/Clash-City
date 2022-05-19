@@ -1185,11 +1185,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69dcdc349a22d954ba6415b4e42faf6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 150
+  speed: 75
   maxHealth: 3
   health: 7
   coinsOnKill: 18
   hitCoolDown: 2
+  currencyManager: {fileID: 0}
 --- !u!54 &8928270841197495774
 Rigidbody:
   m_ObjectHideFlags: 0

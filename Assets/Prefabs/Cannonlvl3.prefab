@@ -175,10 +175,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectilePrefab: {fileID: 1900490364220330051, guid: c3379d56da4a4e24abca69475c394ee4, type: 3}
-  fireRate: 3
-  Cooldown: 2
+  fireRate: 1.7
+  Cooldown: 1.5
   setEnemy: {fileID: 0}
   isEnemy: 0
   En: []
   num: 0
-  radius: 50
+  radius: 30
+  dmg: 15

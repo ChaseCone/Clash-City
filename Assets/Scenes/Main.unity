@@ -4046,7 +4046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8867a70c9e8193d4b9893b0618ee0def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currency: 2147483647
+  currency: 200
   currencyText: {fileID: 2058099406}
 --- !u!4 &1122324384
 Transform:

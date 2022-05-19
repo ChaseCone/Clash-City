@@ -11,7 +11,9 @@ public class Projectile : MonoBehaviour
     public GameObject enemy;
     public Towers towerScript;
     public EnemyMove foe;
-    public int dmg = 1;
+    public int dmg;
+    private int x = 1;
+    
     void Start()
     {
         
@@ -21,25 +23,35 @@ public class Projectile : MonoBehaviour
     void LateUpdate()
     {
 
-        
+        if (enemy != null)
+        {
             lookPostion = (enemy.transform.position - transform.position).normalized;
             transform.Translate(lookPostion * Time.deltaTime * speed);
-       
+        }
+
+        StartCoroutine(Clear());
     }
 
     public void OnTriggerEnter(Collider other)
     {
         if (enemy == other.gameObject)
         {
-          
+
             Destroy(gameObject);
             enemy.GetComponent<EnemyMove>().health -= dmg;
-            
-                
-           
+
+
+
         }
 
-    }
 
+    }
+    IEnumerator Clear()
+    {
+
+        yield return new WaitForSeconds(3);
+        Destroy(gameObject);
+       
+    }
 
 }

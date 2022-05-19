@@ -7,13 +7,13 @@ public class Towers : MonoBehaviour
     public GameObject ProjectilePrefab;
     public float fireRate = 3f;
     public float Cooldown = 2f;
-    public GameObject setEnemy;
     public bool isEnemy = false;
-    private List<GameObject> targets = new List<GameObject>();
+    public List<GameObject> targets = new List<GameObject>();
     public GameObject[] En;
     public int num = 0;
-    public float radius = 50;
+    public float radius;
     private Projectile p;
+    public int dmg;
    
 
     // Start is called before the first frame update
@@ -28,50 +28,33 @@ public class Towers : MonoBehaviour
         En = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject e in En)
         {
-            if (Vector3.Distance(gameObject.transform.position, e.transform.position) <= radius)
+            if (Vector3.Distance(e.transform.position, gameObject.transform.position) >= radius)
             {
                 isEnemy = true;
+               
                 if (Cooldown <= 0f && isEnemy == true)
                 {
 
                     GameObject g = Instantiate(ProjectilePrefab, transform.position, ProjectilePrefab.transform.rotation);
-
+                    targets.ToArray();
                     Cooldown = 1f / fireRate;
                     Cooldown = 3;
                     p = g.GetComponent<Projectile>();
-                    p.enemy = En[0];
-                    
+                    p.enemy = e;
+                    p.dmg = dmg;
+                    isEnemy = false;
 
                 }
                 Cooldown -= Time.deltaTime;
 
             }
+
+            else { isEnemy = false; }
         }
 
-
-
+    
     }
 }
 
 
-   //private void OnTriggerEnter(Collider other)
-   //{
-   //  if (other.CompareTag("Enemy"))
-   //   {
-
-//   Debug.Log("Yes");
-//      targets.Add(other.gameObject);
-//      isEnemy = true;
-
-//    }
-// }*
-// private void OnTriggerExit(Collider other)
-// {
-//     if (targets.Contains(other.gameObject))
-//     {
-//    targets.Remove(other.gameObject);
-//    }
-// }
-
-//}
-
+  

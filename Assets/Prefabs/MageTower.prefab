@@ -65,6 +65,7 @@ MonoBehaviour:
   En: []
   num: 0
   radius: 50
+  dmg: 0
 --- !u!1 &5774946434458264821
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,13 +183,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectilePrefab: {fileID: 3743605600337994097, guid: 683b28e7485379e42b7d86adb9767222, type: 3}
-  fireRate: 3
-  Cooldown: 2
+  fireRate: 2
+  Cooldown: 1.5
   setEnemy: {fileID: 0}
   isEnemy: 0
   En: []
   num: 0
-  radius: 50
+  radius: 33
+  dmg: 25
 --- !u!114 &2424831742795462805
 MonoBehaviour:
   m_ObjectHideFlags: 0
