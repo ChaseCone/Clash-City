@@ -25,13 +25,14 @@ public class Towers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject enemy;
         En = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject e in En)
         {
-            if (Vector3.Distance(e.transform.position, gameObject.transform.position) >= radius)
+            if (Vector3.Distance(e.transform.position, gameObject.transform.position) < radius)
             {
                 isEnemy = true;
-               
+                enemy = e;
                 if (Cooldown <= 0f && isEnemy == true)
                 {
 
@@ -40,7 +41,7 @@ public class Towers : MonoBehaviour
                     Cooldown = 1f / fireRate;
                     Cooldown = 3;
                     p = g.GetComponent<Projectile>();
-                    p.enemy = e;
+                    p.enemy = enemy;
                     p.dmg = dmg;
                     isEnemy = false;
 

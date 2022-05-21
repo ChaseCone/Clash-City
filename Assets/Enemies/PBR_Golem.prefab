@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 25
-  maxHealth: 3
+  maxHealth: 45
   health: 15
   coinsOnKill: 25
   hitCoolDown: 2

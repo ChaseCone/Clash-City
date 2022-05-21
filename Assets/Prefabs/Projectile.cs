@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour
 
         if (enemy != null)
         {
-            lookPostion = (enemy.transform.position - transform.position).normalized;
+            lookPostion = (enemy.transform.position - transform.position);
             transform.Translate(lookPostion * Time.deltaTime * speed);
         }
 

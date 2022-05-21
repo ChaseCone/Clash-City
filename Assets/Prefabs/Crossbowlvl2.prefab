@@ -133,11 +133,11 @@ MonoBehaviour:
   ProjectilePrefab: {fileID: 4104065917844904418, guid: 3b6d30a257ed9a24cb09730402203efe, type: 3}
   fireRate: 3
   Cooldown: 3
-  setEnemy: {fileID: 0}
   isEnemy: 0
+  targets: []
   En: []
   num: 0
-  radius: 20
+  radius: 70
   dmg: 6
 --- !u!1 &7617475455500791153
 GameObject:

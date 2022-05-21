@@ -100,8 +100,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
+  maxHealth: 16
   health: 4
   coinsOnKill: 10
+  hitCoolDown: 2
+  currencyManager: {fileID: 0}
 --- !u!65 &6094243039515051493
 BoxCollider:
   m_ObjectHideFlags: 0

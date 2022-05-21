@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,9 +10,9 @@ public class TowerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Transform bar = transform.Find("Healthbar");
-        HealthSystem hs = bar.GetComponent<HealthSystem>();
-        hs.Setup(this);
+       // GameObject bar = GameObject.Find("Healthbar");
+       // HealthSystem hs = bar.GetComponent<HealthSystem>();
+       // hs.Setup(this);
         health = maxHealth;
     }
 

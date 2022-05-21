@@ -60,8 +60,8 @@ MonoBehaviour:
   ProjectilePrefab: {fileID: 3743605600337994097, guid: 683b28e7485379e42b7d86adb9767222, type: 3}
   fireRate: 3
   Cooldown: 2
-  setEnemy: {fileID: 0}
   isEnemy: 0
+  targets: []
   En: []
   num: 0
   radius: 50
@@ -185,11 +185,11 @@ MonoBehaviour:
   ProjectilePrefab: {fileID: 3743605600337994097, guid: 683b28e7485379e42b7d86adb9767222, type: 3}
   fireRate: 2
   Cooldown: 1.5
-  setEnemy: {fileID: 0}
   isEnemy: 0
+  targets: []
   En: []
   num: 0
-  radius: 33
+  radius: 123
   dmg: 25
 --- !u!114 &2424831742795462805
 MonoBehaviour:
