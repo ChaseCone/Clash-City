@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class TowerManager : MonoBehaviour
 {
-    public int maxHealth = 3;
+    public int maxHealth = 5;
     public int health;
     // Start is called before the first frame update
     void Start()
     {
-        Transform bar = transform.Find("Healthbar");
+        GameObject bar = GameObject.Find("HealthBar");
+        //Debug.Log("Bar:" + bar);
         HealthSystem hs = bar.GetComponent<HealthSystem>();
         hs.Setup(this);
-        health = maxHealth;
+
+        GameObject bar1 = GameObject.Find("HealthBar1");
+        //bar1.active = false;
+        health = 1;
     }
 
     // Update is called once per frame
