@@ -205,7 +205,7 @@ MonoBehaviour:
   targets: []
   En: []
   num: 0
-  radius: 70
+  radius: 200
   dmg: 5
 --- !u!54 &-5952526460627082187
 Rigidbody:

@@ -137,7 +137,7 @@ MonoBehaviour:
   targets: []
   En: []
   num: 0
-  radius: 70
+  radius: 210
   dmg: 6
 --- !u!1 &7617475455500791153
 GameObject:

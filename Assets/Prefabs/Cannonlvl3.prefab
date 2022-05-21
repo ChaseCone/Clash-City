@@ -181,5 +181,5 @@ MonoBehaviour:
   targets: []
   En: []
   num: 0
-  radius: 110
+  radius: 400
   dmg: 15
